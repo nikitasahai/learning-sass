@@ -1,0 +1,8 @@
+*.css
+bootcamp
+vagrant_getting_started
+*.css.map
+trash
+history-day-2.txt
+.sass-cache
+.vagrant

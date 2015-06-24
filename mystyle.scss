@@ -1,0 +1,55 @@
+/*@import 'button';*/
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+.green-button {
+  @include button(green);
+  margin-right: 0;
+}
+ 
+.cancel-button {
+  @include button(#333);
+  padding: 1em;
+  border: 1px solid blue;
+  margin-left: 0;
+  
+}
+
+
+.zero {
+  /*@include outer-container;*/
+  background: tint(blue, 95%);
+  text-align: center;
+  padding: 1em 0;
+  
+  }
+
+
+.box {
+  /*padding: 1em;*/
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background-color: blue;
+  display: block;
+  /*color: white;*/
+  /*@include transition(all 1.0s ease-in-out);*/
+}
+
+section {
+  display: block;
+}
+
+
+section:hover .box {
+  position: relative;
+  background-color: red;
+  
+  /*@include animation(scale 1.0s ease-in, slide 2.0s ease);*/
+
+  // The above outputs the same CSS as using independent, granular mixins.
+  @include animation-name(scale, slide);
+  @include animation-duration(2s);
+  @include animation-timing-function(ease);
+  @include animation-iteration-count(infinite);
+}

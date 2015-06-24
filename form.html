@@ -1,0 +1,79 @@
+<html>
+<head>
+	<script type="text/javascript">
+  //   function hasSpace(str) {
+  //     var splitted = str.split(' ');
+  //     if (splitted.length != 1 )
+  //       return true;
+  //     return false;
+  //   }
+  //   window.onload = function () {
+  //     var input = document.form.firstname;
+  //     input.addEventListener('click', function () {
+  //       console.log('clicked');
+  //       console.log(input.value);
+  //     });
+  //   };
+		 function spacer(){
+
+		var flag=0;
+       var strText = document.form.firstname.value;
+       if (strText!="")
+       {
+       var strArr = strText.split(" ");
+
+       if(strArr[0]==" ") // this is the the key part. you can do whatever you want here!
+       {
+       flag=1;
+       }
+
+
+       }
+
+       if(document.form.firstname.value==" " || flag == 1 )
+       {        alert("shouldn't be blank or contain blank space at the Bewgining!!");
+               document.form.firstname.value="";
+               document.form.firstname.focus();
+               return false;
+       }
+       return true;
+       
+		};
+	</script>
+	<title>
+			Form page.
+
+	</title>
+		<link rel="stylesheet" type="text/css" href="form.css"/>
+
+</head>
+<body>
+	<div class= "main">
+		MAIN PAGE
+
+	</div>
+	
+<div class = "row">
+<div class = "end-col"> end</div>
+<div class = "center-col">
+<form name= "form" action="form.html" >
+First name:<br>
+<input type="text" required name="firstname">
+<br>
+Last name:<br>
+<input type="text" required name="lastname">
+<br>
+email:<br>
+<input type="email" name="email">
+<br>
+address:<br>
+<input type="number" name="zipcode">
+<input type="submit" value="Save" onclick="spacer()">
+</form>
+</div>
+<div class = "end-col"> end2 </div>
+
+</div>
+
+</body>
+</html>
